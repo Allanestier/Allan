@@ -1,0 +1,15 @@
+import sqlite3
+
+# Подключение к базе данных SQLite (или создание, если она не существует)
+conn = sqlite3.connect('user_management.db')
+cursor = conn.cursor()
+
+# Создание таблицы пользователей
+cursor.execute('''CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    age INTEGER
+)''')
+
+conn.commit()

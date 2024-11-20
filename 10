@@ -1,0 +1,6 @@
+# Пример вызовов функций:
+user_id = insert_user('John Doe', 'john@example.com', 30)
+print(select_user(user_id))  # Выбор пользователя по ID
+update_user(user_id, 'John Smith', 'johnsmith@example.com', 31)  # Обновление пользователя
+print(select_user(user_id))  # Проверка обновленных данных
+delete_user(user_id)  # Удаление пользователя
